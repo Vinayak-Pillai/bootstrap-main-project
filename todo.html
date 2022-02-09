@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="BOOTSTRAP/js/popper.min.js"></script>
+    <script src="BOOTSTRAP/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+    <title>Dore jQuery</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="todo_cls">
+    <nav class="navbar position-sticky top-0 navbar_container">
+        <div class="d-flex justify-content-between align-items-center w-100 p-4">
+            <div class="navflexleft d-flex justify-content-between align-items-center ms-2 ms-lg-4 ms-xl-5 me-2 me-sm-0">
+                <div class="navsvg d-flex mx-3">
+                    <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                        <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="15.5" width="7" height="1"></rect>
+                    </svg>
+                    <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                        <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="15.5" width="16" height="1"></rect>
+                    </svg>
+                </div>
+                <div class="searchbar d-flex align-items-center position-relative">
+                    <input type="search" class="form-control input_search rounded-pill d-none d-md-block ms-3"
+                        placeholder="Search">
+                    <i class="bi-search position-absolute end-0 me-2 d-none d-md-block"></i>
+                    <i class="bi-search d-md-none"></i>
+                </div>
+                <div class="navflexleft_button">
+                    <button class="rounded-pill px-3 py-2 ms-4 d-none d-md-block">BUY</button>
+                </div>
+               
+            </div>
+            <div class="logo_container"></div>
+            <div class="navflexright d-flex align-items-center justify-content-lg-evenly me-3 me-xl-5">
+                <div class="form-check form-switch d-none d-md-block mt-2">
+                    <input type="checkbox" class="form-check-input mx-0 input_checkbox">
+                </div>
+                <div class="navicons_flex mx-2 d-flex flex-row">
+                    <i class="d-none d-md-block bi-grid mx-2"></i>
+                    <i class="bi-bell position-relative mx-2"></i>
+                    <i class="d-none d-md-block bi-arrows-fullscreen mx-2"></i>
+                </div>
+                <div class="profile d-flex align-items-center">
+                    <p class="profile_name mb-0 me-2 d-none d-lg-block">Sarah Kortney</p>
+                    <img src="Images/Profile/Profile-pic.jpg" alt="" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="bg-white d-none d-md-flex align-items-start p-0 scrollspy_container position-fixed start-0 rounded-3">
+        <div class="scrollspyflex d-flex flex-column justify-content-start nav nav-tabs">
+            <!-- <div class="p-0 scrollspyleftflex d-flex flex-column"> -->
+            <button
+                class="scrollspy_items nav-link active d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navDashboard" type="button">
+                <i class="bi-shop"></i>
+                <a href="#" class="p-1 p-md-2">Dashboard</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navPages" type="button">
+                <i class="bi-display"></i>
+                <a href="#" class="p-1 p-md-2">Pages</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-target="#navApps" data-bs-toggle="tab" type="button">
+                <i class="bi-lightbulb"></i>
+                <a href="#" class="p-1 p-md-2">Applications</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navUI" type="button">
+                <i class="bi-bezier2"></i>
+                <a href="#" class="p-1 p-md-2">UI</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navBlankPage" type="button">
+                <i class="bi-bucket"></i>
+                <a href="blank.html" class="p-1 p-md-2">Blank Page</a>
+            </button>
+            <!-- <div
+                        class="scrollspy_items d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4">
+                        <i class="bi-collection"></i>
+                        <a href="#Collection" class="nav-link p-1 p-md-2">Blank Page</a>
+                    </div> -->
+            <!-- </div>    -->
+        </div>
+        <div class="tab-content w-100 p-3 ms-3">
+            <div class="tab-pane fade show active" id="navDashboard">
+                <p href="#" class="scrollspy_lists py-4"><i class="fa fa-rocket px-3"></i>Default</p>
+                <p href="#" class="scrollspy_lists py-4"><i class="fa fa-pie-chart px-3"></i>Analytics</p>
+                <p href="#" class="scrollspy_lists py-4"><i class="bi-basket-fill px-3"></i>E-commerce</p>
+                <p href="#" class="scrollspy_lists py-4"><i class="bi-file-earmark px-3"></i>Content</p>
+            </div>
+            <div class="tab-pane fade" id="navPages">
+                <div class="accordion accordion-flush" id="AccordionEx1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli1">Authorization</button>
+                        </h2>
+                        <div id="accli1" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Login</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Register</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Forgot-password</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#accli2">Product</button>
+                        </h2>
+                        <div id="accli2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="ps-0 list-unstyled">
+                                    <li class="mb-3 ms-4"><i class="fa fa-credit-card me-2"></i>Data List</li>
+                                    <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>Thumb List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-grid me-2"></i>Image List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-book me-2"></i>Detail</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli3">
+                                Profile
+                            </button>
+                            <div id="accli3" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-share me-2"></i>Social</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-link me-2"></i>Portfolio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli4">
+                                Blog
+                            </button>
+                            <div id="accli4" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>List</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-book me-2"></i>Detail</li>
+                                        <li class="mb-3 ms-4"><i class="bi-tv me-2"></i>Detail Alt</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli5">
+                                Miscellaneous
+                            </button>
+                            <div id="accli5" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-hourglass me-2"></i>Coming Soon</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-circle-o me-2"></i>Error</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-question-circle me-2"></i>FAQ</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-shopping-bag me-2"></i>Invoice</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-graduation-cap me-2"></i>Knowledge Cap</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-envelope-open-o me-2"></i>Mailing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-diamond me-2"></i>Pricing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-search me-2"></i>Search</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navApps">
+                <p class="scrollspy_lists py-2"><i class="fa fa-desktop px-3"></i>Library</p>
+                <p class="scrollspy_lists py-2"><i class="fa fa-check-circle-o px-3"></i>To-do</p>
+                <p class="scrollspy_lists py-2"><i class="fa fa-calculator px-3"></i>Survey</p>
+                <p class="scrollspy_lists py-2"><i class="fa fa-wechat px-3"></i>Chat</p>
+            </div>
+            <div class="tab-pane fade" id="navUI">
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli5">Forms</button>
+                        </h2>
+                        <div id="accli5" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>Components</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-earmark me-2"></i>Layouts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-check-circle-o me-2"></i>Validation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Wizard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli6">Datatables</button>
+                        </h2>
+                        <div id="accli6" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>FullPage UI</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-mouse-pointer me-2"></i>Scrollable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-break me-2"></i>Pagination</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Default</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli7">Datatables</button>
+                        </h2>
+                        <div id="accli7" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-bell me-2"></i>Alerts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-id-badge me-2"></i>Badges</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-play me-2"></i>Buttons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-card-list me-2"></i>Cards</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-image me-2"></i>Carousel</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chat-right me-2"></i>Charts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-up me-2"></i>Collapse</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-down me-2"></i>Dropdowns</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-book me-2"></i>Editors</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Icons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-input-cursor me-2"></i>Input Groups</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-tv me-2"></i>Jumbotron</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-files me-2"></i>Modal</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-navicon me-2"></i>Navigation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-pin me-2"></i>Popover & Tooltip</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-sort-alpha-down me-2"></i>Sortable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Tables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="main_page">
+        
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 col-lg-9 p-2 p-md-5">
+                    <div class="d-flex flex-column d-md-flex  flex-md-row justify-content-md-between align-items-md-center">
+                        <div class="todo_title_container">
+                            <p class="todo_title">Todo</p>
+                        </div>
+                        <div class="todo_btn_container">
+                            <button class="btn btn-outline-primary btn-lg add_btn rounded-pill ms-2">ADD NEW</button>
+                            <div class="btn-group">
+                                <button class="btn btn-primary left_rounded_btn text-center">
+                                    <div class="form-check ps-2">
+                                        <input type="checkbox" name="" id="" class="form-check">
+                                    </div>
+                                </button>
+                                <button class="btn btn-primary dropdown-toggle right_rounded_btn dropdown-toggle-split btn-lg" data-bs-toggle="dropdown"></button>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">Action</li>
+                                    <li class="dropdown-item">Another Action</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-3 accdisplay_cls d-md-none" id="accdisplay">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed displayby_acc_btn" type="button" data-bs-toggle="collapse" data-bs-target="#DisplayBy">Display By</button>
+                            </h2>
+                        </div>
+                        <div id="DisplayBy" class="accordion-collaspe collapse">
+                            <div class="accordion-body d-flex">
+                                <div class="dropdown">
+                                    <button class="dropdown_inline rounded-pill btn btn-outline-dark dropdown-toggle text-secondary dropdown h-100"
+                                        data-bs-toggle="dropdown">Order
+                                        by</button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-item">Action</div>
+                                        <div class="dropdown-item">Another Action</div>
+                                    </div>
+                                </div>
+                                <div class="position-relative abs_dropdown_sm">
+                                    <input type="search" class="form-control ms-2 w-75 rounded-pill" placeholder="Search">
+                                    <i class="bi-search position-absolute"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown_flex d-none d-md-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="dropdown_inline rounded-pill btn btn-outline-dark dropdown-toggle text-secondary dropdown" data-bs-toggle="dropdown">Order
+                                by</button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item">Action</div>
+                                <div class="dropdown-item">Another Action</div>
+                            </div>
+                        </div>
+                        <div class="position-relative abs_dropdown">
+                            <input type="search" class="form-control ms-2  rounded-pill position-relative" placeholder="Search">
+                            <i class="bi-search position-absolute"></i>
+                        </div>
+                    </div>
+                    <div class="border-bottom d-none d-md-block mt-3 mb-4"></div>
+                    <div class="todo_card_container">
+                        <div class="todo_card card mt-3">
+                            <div class="card-body d-flex d-md-block justify-content-between align-items-center">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                                    <p class="todo_icons mb-0"><i class="bi-arrow-repeat me-2"></i>Book train tickets</p>
+                                    <p class="text-muted ticket_type mb-0 text-center">Personal</p>
+                                    <p class="text-muted ticket_date mb-0">11.08.2018</p>
+                                    <p class="rounded-pill text-light todo_onhold_btn mb-0">ON HOLD</p>
+                                    <div class="d-none d-md-block pt-1">
+                                        <input type="checkbox" class="form-check-input">
+                                    </div>
+                                </div>
+                                <div class="d-md-none pt-1">
+                                    <input type="checkbox" class="form-check-input sm_display_form_check">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo_card card mt-3">
+                            <div class="card-body d-flex d-md-block justify-content-between align-items-center">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                                    <p class="todo_icons mb-0"><i class="bi-arrow-repeat me-2"></i>Complete weekly delivery</p>
+                                    <p class="text-muted ticket_type mb-0 text-center">Store</p>
+                                    <p class="text-muted ticket_date mb-0">14.07.2018</p>
+                                    <p class="rounded-pill text-light todo_onhold_btn mb-0">PROCESSED</p>
+                                    <div class="d-none d-md-block form-check pt-1">
+                                        <input type="checkbox" class="form-check-input">
+                                    </div>
+                                </div>
+                                <div class="d-md-none pt-1">
+                                    <input type="checkbox" class="form-check-input sm_display_form_check">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo_card card mt-3">
+                            <div class="card-body d-flex d-md-block justify-content-between align-items-center">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                                    <p class="todo_icons mb-0"><i class="bi-check-circle me-2"></i>Take photos of cake</p>
+                                    <p class="text-muted ticket_type mb-0 text-center">Personal</p>
+                                    <p class="text-muted ticket_date mb-0">11.08.2018</p>
+                                    <p class="rounded-pill text-light todo_onhold_btn mb-0">ON HOLD</p>
+                                    <div class="d-none d-md-block form-check pt-1">
+                                        <input type="checkbox" class="form-check-input">
+                                    </div>
+                                </div>
+                                <div class="d-md-none pt-1">
+                                    <input type="checkbox" class="form-check-input sm_display_form_check">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3 p-0 d-none d-lg-block">
+                    <div class="card framework_container vh-100">
+                        <div class="p-4 h-100">
+                            <div class="framework_status">
+                                <p class="mb-3 status_heading text-muted">Status</p>
+                                <div class="status_1">
+                                    <p class="mb-2 d-inline-block"><i class="bi-arrow-repeat me-2"></i>Pending Tasks</p>
+                                    <p class="mb-2 d-inline-block float-end">12</p>
+                                </div>
+                                <div class="status_1">
+                                    <p class="mb-4 d-inline-block"><i class="bi-check-circle me-2"></i>Completed Tasks</p>
+                                    <p class="mb-4 d-inline-block float-end">34</p>
+                                </div>
+                            </div>
+                            <div class="framework_categories_container mb-5">
+                                <p class="mb-3 framework_categories_heading text-muted">Categories</p>
+                                <div class="framework_categories">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="flexbox" class="form-check-input">
+                                        <label for="flexbox" class="form-label">Flexbox</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="sass" class="form-check-input">
+                                        <label for="sass" class="form-label">Sass</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="react" class="form-check-input">
+                                        <label for="react" class="form-label">React</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="framework_labels">
+                                <div class="framework_labels_heading">Labels</div>
+                                <div class="framework_labels_buttons">
+                                    <button class="btn btn-outline-primary rounded-pill mt-2">NEW FRAMEWORK</button>
+                                    <button class="btn btn-outline-primary rounded-pill mt-2" disabled>EDUCATION</button>
+                                    <button class="btn btn-outline-primary rounded-pill mt-2">PERSONAL</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#OffcanvasContainer" class="position-fixed p-0 btn btn-outline-light top-50 translate-middle offcanvas_button_lg"
+        data-bs-toggle="offcanvas">
+        <i class="bi-star text-primary"></i>
+    </a>
+    <a href="#OffcanvasContainer1"
+        class="position-fixed top-25 p-0 btn btn-outline-light translate-middle offcanvas_button_sm"
+        data-bs-toggle="offcanvas">
+        <i class="bi-chat-dots text-primary"></i>
+    </a>
+    
+    <div class="offcanvas offcanvas-end offcanvas_main_container translate-middle-y top-50" id="OffcanvasContainer">
+        <div class="offcanvas-body p-0">
+            <div class="p-4">
+                <div class="offcanvas-title text-secondary mb-2">Light Theme</div>
+                <div class="offcanvas_icons d-flex mb-3 ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir1"></p>
+                    <p class="border rounded-circle cir cir2"></p>
+                    <p class="border rounded-circle cir cir3"></p>
+                    <p class="border rounded-circle cir cir4"></p>
+                    <p class="border rounded-circle cir cir5"></p>
+                </div>
+                <div class="offcanvas_icons d-flex ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir6"></p>
+                    <p class="border rounded-circle cir cir7"></p>
+                    <p class="border rounded-circle cir cir8"></p>
+                    <p class="border rounded-circle cir cir9"></p>
+                    <p class="border rounded-circle cir cir10"></p>
+                </div>
+                <div class="offcanvas-title text-secondary mb-2">Dark Theme</div>
+                <div class="offcanvas_icons d-flex mb-3 ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir1"></p>
+                    <p class="border rounded-circle cir cir2"></p>
+                    <p class="border rounded-circle cir cir3"></p>
+                    <p class="border rounded-circle cir cir4"></p>
+                    <p class="border rounded-circle cir cir5"></p>
+                </div>
+                <div class="offcanvas_icons d-flex ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir6"></p>
+                    <p class="border rounded-circle cir cir7"></p>
+                    <p class="border rounded-circle cir cir8"></p>
+                    <p class="border rounded-circle cir cir9"></p>
+                    <p class="border rounded-circle cir cir10"></p>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="offcanvas-title">Border Radius</div>
+                <div class="d-flex align-items-center mt-2">
+                    <div class="border rounded-circle strong_border "></div>
+                    <div class="ms-1 me-4 strong_border_text">Rounded</div>
+                    <div class="border rounded-circle border-secondary light_border"></div>
+                    <div class="ms-1 light_border_text">Flat</div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="offcanvas-title">Direction</div>
+                <div class="d-flex align-items-center mt-2">
+                    <div class="border rounded-circle strong_border"></div>
+                    <div class="ms-1 me-4 strong_border_text">Ltr</div>
+                    <div class="border rounded-circle border-secondary light_border"></div>
+                    <div class="ms-1 light_border_text">Rtl</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end offcanvas_main_container_sm " id="OffcanvasContainer1">
+        <div class="offcanvas-body p-0">
+            <div class="card framework_container vh-100">
+                <div class="p-4 h-100">
+                    <div class="framework_status">
+                        <p class="mb-3 status_heading text-muted">Status</p>
+                        <div class="status_1">
+                            <p class="mb-2 d-inline-block"><i class="bi-arrow-repeat me-2"></i>Pending Tasks</p>
+                            <p class="mb-2 d-inline-block float-end">12</p>
+                        </div>
+                        <div class="status_1">
+                            <p class="mb-4 d-inline-block"><i class="bi-check-circle me-2"></i>Completed Tasks</p>
+                            <p class="mb-4 d-inline-block float-end">34</p>
+                        </div>
+                    </div>
+                    <div class="framework_categories_container mb-5">
+                        <p class="mb-3 framework_categories_heading text-muted">Categories</p>
+                        <div class="framework_categories">
+                            <div class="form-check">
+                                <input type="checkbox" id="flexbox" class="form-check-input">
+                                <label for="flexbox" class="form-label">Flexbox</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="sass" class="form-check-input">
+                                <label for="sass" class="form-label">Sass</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="react" class="form-check-input">
+                                <label for="react" class="form-label">React</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="framework_labels">
+                        <div class="framework_labels_heading">Labels</div>
+                        <div class="framework_labels_buttons">
+                            <button class="btn btn-outline-primary rounded-pill mt-2">NEW FRAMEWORK</button>
+                            <button class="btn btn-outline-primary rounded-pill mt-2" disabled>EDUCATION</button>
+                            <button class="btn btn-outline-primary rounded-pill mt-2">PERSONAL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

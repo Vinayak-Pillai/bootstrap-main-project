@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="BOOTSTRAP/js/popper.min.js"></script>
+    <script src="BOOTSTRAP/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+    <title>Dore jQuery</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar position-sticky top-0 navbar_container">
+        <div class="d-flex justify-content-between align-items-center w-100 p-4">
+            <div class="navflexleft d-flex justify-content-between align-items-center ms-2 ms-lg-4 ms-xl-5 me-2 me-sm-0">
+                <div class="navsvg d-flex mx-3">
+                    <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                        <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="15.5" width="7" height="1"></rect>
+                    </svg>
+                    <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                        <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="15.5" width="16" height="1"></rect>
+                    </svg>
+                </div>
+                <div class="searchbar d-flex align-items-center position-relative">
+                    <input type="search"
+                        class="form-control input_search rounded-pill d-none d-md-block ms-3 ms-md-0 ms-xl-3"
+                        placeholder="Search">
+                    <i class="bi-search position-absolute end-0 me-2 d-none d-md-block"></i>
+                    <i class="bi-search d-md-none"></i>
+                </div>
+                <div class="navflexleft_button">
+                    <button class="rounded-pill px-3 py-2 ms-4 ms-md-2 d-none d-md-block"
+                        data-bs-target="#todo.html">BUY</button>
+                </div>
+                <div class="navflextodo_btn d-lg-none">
+                    <a href="todo.html" class="ms-2 text-decoration-none text-dark">Todo</a>
+                </div>
+            </div>
+            <div class="logo_container"></div>
+            <div class="navflexright d-flex align-items-center justify-content-lg-evenly me-3 me-xl-5">
+                <div class="form-check form-switch d-none d-md-block mt-2">
+                    <input type="checkbox" class="form-check-input mx-0 input_checkbox" ata-bs-toggle="tooltip" data-bs-placement="left"
+                        title="Dark Mode">
+                </div>
+                <div class="navicons_flex mx-2 d-flex flex-row">
+                    <i class="d-none d-md-block bi-grid mx-2"></i>
+                    <i class="bi-bell position-relative mx-2"></i>
+                    <i class="d-none d-md-block bi-arrows-fullscreen mx-2"></i>
+                </div>
+                <div class="profile d-flex align-items-center">
+                    <p class="profile_name mb-0 me-2 d-none d-lg-block">Sarah Kortney</p>
+                    <img src="Images/Profile/Profile-pic.jpg" alt="" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="bg-white d-none d-md-flex align-items-start p-0 scrollspy_container position-fixed start-0 rounded-3">
+        <div class="scrollspyflex d-flex flex-column justify-content-start nav nav-tabs">
+            <!-- <div class="p-0 scrollspyleftflex d-flex flex-column"> -->
+            <button
+                class="scrollspy_items nav-link active d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navDashboard" type="button">
+                <i class="bi-shop"></i>
+                <a href="#" class="p-1 p-md-2">Dashboard</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navPages" type="button">
+                <i class="bi-display"></i>
+                <a href="#" class="p-1 p-md-2">Pages</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-target="#navApps" data-bs-toggle="tab" type="button">
+                <i class="bi-lightbulb"></i>
+                <a href="#" class="p-1 p-md-2">Applications</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navUI" type="button">
+                <i class="bi-bezier2"></i>
+                <a href="#" class="p-1 p-md-2">UI</a>
+            </button>
+            <button
+                class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"
+                data-bs-toggle="tab" data-bs-target="#navBlankPage" type="button">
+                <i class="bi-bucket"></i>
+                <a href="blank.html" class="p-1 p-md-2">Blank Page</a>
+            </button>
+            <!-- <div
+                        class="scrollspy_items d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4">
+                        <i class="bi-collection"></i>
+                        <a href="#Collection" class="nav-link p-1 p-md-2">Blank Page</a>
+                    </div> -->
+            <!-- </div>    -->
+        </div>
+        <div class="tab-content w-100 p-3 ms-3">
+            <div class="tab-pane fade show active" id="navDashboard">
+                <p href="#" class="scrollspy_lists py-2"><i class="fa fa-rocket px-3"></i>Default</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="fa fa-pie-chart px-3"></i>Analytics</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="bi-basket-fill px-3"></i>E-commerce</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="bi-file-earmark px-3"></i>Content</p>
+            </div>
+            <div class="tab-pane fade" id="navPages">
+                <div class="accordion accordion-flush" id="AccordionEx1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli1">Authorization</button>
+                        </h2>
+                        <div id="accli1" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Login</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Register</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Forgot-password</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#accli2">Product</button>
+                        </h2>
+                        <div id="accli2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="ps-0 list-unstyled">
+                                    <li class="mb-3 ms-4"><i class="fa fa-credit-card me-2"></i>Data List</li>
+                                    <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>Thumb List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-grid me-2"></i>Image List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-book me-2"></i>Detail</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli3">
+                                Profile
+                            </button>
+                            <div id="accli3" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-share me-2"></i>Social</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-link me-2"></i>Portfolio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli4">
+                                Blog
+                            </button>
+                            <div id="accli4" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>List</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-book me-2"></i>Detail</li>
+                                        <li class="mb-3 ms-4"><i class="bi-tv me-2"></i>Detail Alt</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli5">
+                                Miscellaneous
+                            </button>
+                            <div id="accli5" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-hourglass me-2"></i>Coming Soon</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-circle-o me-2"></i>Error</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-question-circle me-2"></i>FAQ</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-shopping-bag me-2"></i>Invoice</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-graduation-cap me-2"></i>Knowledge Cap</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-envelope-open-o me-2"></i>Mailing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-diamond me-2"></i>Pricing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-search me-2"></i>Search</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navApps">
+                <ul class="list-unstyled ps-0">
+                    <li class="scrollspy_lists py-2"><i class="fa fa-desktop px-3"></i>Library</li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-check-circle-o px-3"></i><a href="todo.html"
+                            class="text-decoration-none text-dark">To-do</a></li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-calculator px-3"></i>Survey</li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-wechat px-3"></i>Chat</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="navUI">
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli5">Forms</button>
+                        </h2>
+                        <div id="accli5" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>Components</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-earmark me-2"></i>Layouts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-check-circle-o me-2"></i>Validation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Wizard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli6">Datatables</button>
+                        </h2>
+                        <div id="accli6" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>FullPage UI</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-mouse-pointer me-2"></i>Scrollable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-break me-2"></i>Pagination</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Default</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli7">Datatables</button>
+                        </h2>
+                        <div id="accli7" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-bell me-2"></i>Alerts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-id-badge me-2"></i>Badges</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-play me-2"></i>Buttons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-card-list me-2"></i>Cards</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-image me-2"></i>Carousel</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chat-right me-2"></i>Charts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-up me-2"></i>Collapse</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-down me-2"></i>Dropdowns</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-book me-2"></i>Editors</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Icons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-input-cursor me-2"></i>Input Groups</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-tv me-2"></i>Jumbotron</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-files me-2"></i>Modal</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-navicon me-2"></i>Navigation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-pin me-2"></i>Popover & Tooltip</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-sort-alpha-down me-2"></i>Sortable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Tables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="BOOTSTRAP/js/popper.min.js"></script>
+    <script src="BOOTSTRAP/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
+    <title>Dore jQuery</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar position-sticky top-0 navbar_container">
+        <div class="d-flex justify-content-between align-items-center w-100 p-4">
+            <div class="navflexleft d-flex justify-content-between align-items-center ms-2 ms-lg-4 ms-xl-5 me-2 me-sm-0">
+                <div class="navsvg d-flex mx-3">
+                    <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                        <rect x="0.48" y="0.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="7.5" width="7" height="1"></rect>
+                        <rect x="0.48" y="15.5" width="7" height="1"></rect>
+                    </svg>
+                    <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                        <rect x="1.56" y="0.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="7.5" width="16" height="1"></rect>
+                        <rect x="1.56" y="15.5" width="16" height="1"></rect>
+                    </svg>
+                </div>
+                <div class="searchbar d-flex align-items-center position-relative">
+                    <input type="search" class="form-control input_search rounded-pill d-none d-md-block ms-3 ms-md-0 ms-xl-3" placeholder="Search">
+                    <i class="bi-search position-absolute end-0 me-2 d-none d-md-block"></i>
+                    <i class="bi-search d-md-none"></i>
+                </div>
+                <div class="navflexleft_button">
+                    <button class="rounded-pill px-3 py-2 ms-4 ms-md-2 d-none d-md-block" data-bs-target="#todo.html">BUY</button>
+                </div>
+                <div class="navflextodo_btn d-lg-none">
+                    <a href="todo.html" class="ms-2 text-decoration-none text-dark">Todo</a>
+                </div>
+            </div>
+            <div class="logo_container"></div>
+            <div class="navflexright d-flex align-items-center justify-content-lg-evenly me-3 me-xl-5">
+                <div class="form-check form-switch d-none d-md-block mt-2">
+                    <input type="checkbox" class="form-check-input mx-0 input_checkbox">
+                </div>
+                <div class="navicons_flex mx-2 d-flex flex-row">
+                    <i class="d-none d-md-block bi-grid mx-2"></i>
+                    <i class="bi-bell position-relative mx-2"></i>
+                    <i class="d-none d-md-block bi-arrows-fullscreen mx-2"></i>
+                </div>
+                <div class="profile d-flex align-items-center">
+                    <p class="profile_name mb-0 me-2 d-none d-lg-block">Sarah Kortney</p>
+                    <img src="Images/Profile/Profile-pic.jpg" alt="" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white d-none d-md-flex align-items-start p-0 scrollspy_container position-fixed start-0 rounded-3">
+        <div class="scrollspyflex d-flex flex-column justify-content-start nav nav-tabs">
+            <!-- <div class="p-0 scrollspyleftflex d-flex flex-column"> -->
+                <button
+                    class="scrollspy_items nav-link active d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4" data-bs-toggle="tab" data-bs-target="#navDashboard" type="button">
+                    <i class="bi-shop"></i>
+                    <a href="#" class="p-1 p-md-2">Dashboard</a>
+                </button>
+                <button
+                    class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4" data-bs-toggle="tab" data-bs-target="#navPages" type="button">
+                    <i class="bi-display"></i>
+                    <a href="#" class="p-1 p-md-2">Pages</a>
+                </button>
+                <button
+                    class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4" data-bs-target="#navApps" data-bs-toggle="tab" type="button">
+                    <i class="bi-lightbulb"></i>
+                    <a href="#" class="p-1 p-md-2">Applications</a>
+                </button>
+                <button
+                    class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4"  data-bs-toggle="tab" data-bs-target="#navUI" type="button">
+                    <i class="bi-bezier2"></i>
+                    <a href="#" class="p-1 p-md-2">UI</a>
+                </button>
+                <button
+                    class="scrollspy_items nav-link d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4" data-bs-toggle="tab" data-bs-target="#navBlankPage" type="button">
+                    <i class="bi-bucket"></i>
+                    <a href="#" class="p-1 p-md-2">Blank Page</a>
+                </button>
+                <!-- <div
+                    class="scrollspy_items d-flex flex-column justify-content-center align-items-center  p-2 p-lg-3 p-xl-4">
+                    <i class="bi-collection"></i>
+                    <a href="#Collection" class="nav-link p-1 p-md-2">Blank Page</a>
+                </div> -->
+            <!-- </div>    -->
+        </div>
+        <div class="tab-content w-100 p-3 ms-3">
+            <div class="tab-pane fade show active" id="navDashboard">
+                <p href="#" class="scrollspy_lists py-2"><i class="fa fa-rocket px-3"></i>Default</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="fa fa-pie-chart px-3"></i>Analytics</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="bi-basket-fill px-3"></i>E-commerce</p>
+                <p href="#" class="scrollspy_lists py-2"><i class="bi-file-earmark px-3"></i>Content</p>
+            </div>
+            <div class="tab-pane fade" id="navPages">
+                <div class="accordion accordion-flush" id="AccordionEx1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse" data-bs-target="#accli1">Authorization</button>
+                        </h2>
+                        <div id="accli1" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Login</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Register</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-user-plus me-2"></i>Forgot-password</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli2">Product</button>
+                        </h2>
+                        <div id="accli2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="ps-0 list-unstyled">
+                                    <li class="mb-3 ms-4"><i class="fa fa-credit-card me-2"></i>Data List</li>
+                                    <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>Thumb List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-grid me-2"></i>Image List</li>
+                                    <li class="mb-3 ms-4"><i class="bi-book me-2"></i>Detail</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli3">
+                                Profile
+                            </button>
+                            <div id="accli3" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-share me-2"></i>Social</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-link me-2"></i>Portfolio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli4">
+                                Blog
+                            </button>
+                            <div id="accli4" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-list me-2"></i>List</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-book me-2"></i>Detail</li>
+                                        <li class="mb-3 ms-4"><i class="bi-tv me-2"></i>Detail Alt</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accli5">
+                                Miscellaneous
+                            </button>
+                            <div id="accli5" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled ps-0">
+                                        <li class="mb-3 ms-4"><i class="fa fa-hourglass me-2"></i>Coming Soon</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-circle-o me-2"></i>Error</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-question-circle me-2"></i>FAQ</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-shopping-bag me-2"></i>Invoice</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-graduation-cap me-2"></i>Knowledge Cap</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-envelope-open-o me-2"></i>Mailing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-diamond me-2"></i>Pricing</li>
+                                        <li class="mb-3 ms-4"><i class="fa fa-search me-2"></i>Search</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navApps">
+                <ul class="list-unstyled ps-0">
+                    <li class="scrollspy_lists py-2"><i class="fa fa-desktop px-3"></i>Library</li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-check-circle-o px-3"></i><a href="todo.html" class="text-decoration-none text-dark">To-do</a></li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-calculator px-3"></i>Survey</li>
+                    <li class="scrollspy_lists py-2"><i class="fa fa-wechat px-3"></i>Chat</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="navUI">
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli5">Forms</button>
+                        </h2>
+                        <div id="accli5" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>Components</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-earmark me-2"></i>Layouts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-check-circle-o me-2"></i>Validation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Wizard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli6">Datatables</button>
+                        </h2>
+                        <div id="accli6" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-calendar-event me-2"></i>FullPage UI</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-mouse-pointer me-2"></i>Scrollable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-file-break me-2"></i>Pagination</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Default</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="AccordionEx2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collpased" data-bs-toggle="collapse"
+                                data-bs-target="#accli7">Datatables</button>
+                        </h2>
+                        <div id="accli7" class="accordion-collapse collapse" data-bs-parent="#AccordionEx1">
+                            <div class="accordion-body">
+                                <p class="acc_items mb-3 ms-4"><i class="bi-bell me-2"></i>Alerts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-id-badge me-2"></i>Badges</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-play me-2"></i>Buttons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-card-list me-2"></i>Cards</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-image me-2"></i>Carousel</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chat-right me-2"></i>Charts</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-up me-2"></i>Collapse</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-chevron-down me-2"></i>Dropdowns</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-book me-2"></i>Editors</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-star me-2"></i>Icons</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-input-cursor me-2"></i>Input Groups</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-tv me-2"></i>Jumbotron</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-files me-2"></i>Modal</p>
+                                <p class="acc_items mb-3 ms-4"><i class="fa fa-navicon me-2"></i>Navigation</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-pin me-2"></i>Popover & Tooltip</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-sort-alpha-down me-2"></i>Sortable</p>
+                                <p class="acc_items mb-3 ms-4"><i class="bi-grid me-2"></i>Tables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="main_page p-2 p-md-3">
+        <!-- <div class="main_page_header d-flex align-items-center"> -->
+        <h1 class="main_heading d-lg-inline-block mb-lg-0 ms-1">Dashboard</h1>
+        <nav style="--bs-breadcrumb-divider: '|';" class="mx-2 breadcrumb_class d-none d-md-block d-lg-inline-block">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item active">Library</li>
+                <li class="breadcrumb-item">Data</li>
+            </ol>
+        </nav>
+        <div class="border-bottom mb-3"></div>
+        <!-- </div> -->
+        <div class="page_1">
+            <div class="row row-cols-1 row-cols-xl-2 mx-auto">
+                <div class="col">
+                    <div class="cards row justify-content-between w-100 mx-auto">
+                        <div class="card col-6 col-md-4">
+                            <div class="card-body text-center">
+                                <i class="bi-clock"></i>
+                                <p class="card_text mb-1">Pending Orders</p>
+                                <p class="card_numbers">16</p>
+                            </div>
+                        </div>
+                        <div class="card  col-6 col-md-4">
+                            <div class="card-body text-center">
+                                <i class="bi-basket"></i>
+                                <p class="card_text mb-1">Completed Orders</p>
+                                <p class="card_numbers">32</p>
+                            </div>
+                        </div>
+                        <div class="card d-none d-sm-flex col-6 col-md-4">
+                            <div class="card-body  text-center">
+                                <i class="bi-arrow-repeat"></i>
+                                <p class="card_text mb-1">Refund Request</p>
+                                <p class="card_numbers">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graph1">
+                        <div class="card graph_card">
+                            <div class="card-body">
+                                <h5 class="cb_h5">Sales</h5>
+                                <canvas id="graphOne" ></canvas>
+                                <!-- <img src="Images/Graphs/Graph_1.jpg" alt="" class="w-100"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col orders_col mt-3 mt-lg-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card_orders_heading">
+                                <h5 class="card-title orders_heading">Recent Orders</h5>
+                            </div>
+                            <div class="card_overflow_container">
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/marble-cake-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">NEW</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Marble Cake</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">Latashia Nagy - 100-148 Warwick Trfy, Kansas City, USA</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/fruitcake-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">NEW</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Fruit Cake</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">Marty Otte - 166-156 Rue de Varennes, Gatineau, QC J8T 8G4,
+                                            Canada</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/chocolate-cake-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">PROCESS</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Chocolate Cake</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">Linn Ronning - Rasen 2-14, 98547 Kühndorf, Germany</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/fat-rascal-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">NEW</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Fat Rascal</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">Rasheeda Vaquera - 37 Rue des Grands Prés, 03100 Montluçon,
+                                            France</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/streuselkuchen-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">DONE</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Streuselkuchen</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">RMimi Carreira - 36-71 Victoria St, Birmingham, UK</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                                <div class="card_orders row mb-3">
+                                    <div class="cake_img_container position-relative col-4 col-md-2 col-xl-4">
+                                        <img src="Images/Cakes_list/cremeschnitte-thumb.jpg" alt="" class="w-100 cake_img img-fluid">
+                                        <span class="position-absolute translate-middle rounded-pill translate-middle">DONE</span>
+                                    </div>
+                                    <div class="cake_contents col">
+                                        <p class="h5 mb-3 cake_name">Cremeschnitte</p>
+                                        <p class="d-none d-md-block mb-0 cake_address">Lenna Majeed - 6 Hertford St Mayfair, London, UK</p>
+                                        <p class="d-none d-md-block mb-0 date">09.04.2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_2">
+            <div class="row  product_pages">
+                <div class="col-12 col-lg-4">
+                    <div class="card mt-3">
+                        <div class="card-body p-2">
+                            <h5 class="card-title product_heading">Product Categories</h5>
+                            <!-- <img src="Images/Graphs/Graph_2.png" alt="" class="w-100 d-lg-none"> -->
+                            <!-- <img src="Images/Graphs/Graph_2_big.png" alt="" class="w-100  d-none d-lg-block"> -->
+                            <canvas id="graph2" width="350px" height="370px"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card logs mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title product_heading">Logs</h5>
+                            <div class="logs_overflow_container">
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New User Registration</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">14:12</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Soufflé</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">13:20</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle text-danger"></i>
+                                        <p class="logs_text ms-2">14 products added</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">12:55</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Napoleonshat</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">12:30</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Cremeschnitte</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">14:12</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Soufflé</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">10:40</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle text-danger"></i>
+                                        <p class="logs_text ms-2">2 categories added</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">10:20</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Chocolate Cake</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">09:28</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Bebinca</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">09:25</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Bebinca</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">09:25</p>
+                                </div>
+                                <div class="d-flex logs_content justify-content-between">
+                                    <div class="d-flex">
+                                        <i class="bi-circle"></i>
+                                        <p class="logs_text ms-2">New sale: Chocolate Cake</p>
+                                    </div>
+                                    <p class="logs_time text-secondary">09:28</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card tickets mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title ticket_heading">Tickets</h5>
+                            <div class="tickets_overflow_container">
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/Profile-pic.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Mayra Sibley</p>
+                                        <p class="ticket_time mb-0">09.08.2018 - 12:45</p>
+                                    </div>
+                                </div>
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/l-7.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Mimi Carreira</p>
+                                        <p class="ticket_time mb-0">05.08.2018 - 10:20</p>
+                                    </div>
+                                </div>
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/l-6.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Philip Nelms</p>
+                                        <p class="ticket_time mb-0">05.08.2018 - 09:12</p>
+                                    </div>
+                                </div>
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/l-3.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Terese Threadgill</p>
+                                        <p class="ticket_time mb-0">01.08.2018 - 18:20</p>
+                                    </div>
+                                </div>
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/l-5.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Kathryn Mengel</p>
+                                        <p class="ticket_time mb-0">27.07.2018 - 11:45</p>
+                                    </div>
+                                </div>
+                                <div class="row ticket_content mb-3 pb-3 border-bottom">
+                                    <div class="col-3 ticket_img">
+                                        <img src="Images/Profile/l-4.jpg" alt="" class="w-100 rounded-circle">
+                                    </div>
+                                    <div class="col-9 ticket_text align-self-center">
+                                        <p class="ticket_name mb-0">Esperanza Lodge</p>
+                                        <p class="ticket_time mb-0">24.07.2018 - 15:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="page_3">
+            <div class="row card_info">
+                <div class="col-12 col-lg-4">
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card_info_heading card-title">Profile Status</h5>
+                            <div class="profile_progresses">
+                                <div class="progress1 mb-4">
+                                    <p class="mb-2 progress_heading">Basic Information <span class="float-end text-muted">12/18</span></p>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="12" aria-valuemin="0"
+                                            aria-valuemax="18"></div>
+                                    </div>
+                                </div>
+                                <div class="progress1 mb-4">
+                                    <p class="mb-2 progress_heading">Portfolio<span class="float-end text-muted">1/8</span></p>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="1" aria-valuemin="0"
+                                            aria-valuemax="8"></div>
+                                    </div>
+                                </div>
+                                <div class="progress1 mb-4">
+                                    <p class="mb-2 progress_heading">Billing Details<span class="float-end text-muted">2/6</span></p>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="2" aria-valuemin="0"
+                                            aria-valuemax="6"></div>
+                                    </div>
+                                </div>
+                                <div class="progress1 mb-4">
+                                    <p class="mb-2 progress_heading">Interests<span class="float-end text-muted">0/8</span></p>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="8"></div>
+                                    </div>
+                                </div>
+                                <div class="progress1 mb-4">
+                                    <p class="mb-2 progress_heading">Legal Documents<span class="float-end text-muted">1/2</span></p>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="1" aria-valuemin="0"
+                                            aria-valuemax="2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card mt-3 design_card">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <p class="card_btn mb-3"><span class="rounded-pill text-light">DORE</span></p>
+                            <p class="col-9 text-light mb-3 detailing_text">MAGIC IS IN THE DETAILS</p>
+                            <p class="detailing_last_text mb-3 text-light">Yes, it is indeed!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card mt-3 cakes_names_list">
+                        <div class="card-body">
+                            <h5 class="card-title card_cakes_heading">Cakes</h5>
+                            <div class="cakes_names_listing d-flex justify-content-evenly">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">Marble Cake</li>
+                                    <li class="mb-1">Fruit Cake</li>
+                                    <li class="mb-1">Chocolate Cake</li>
+                                    <li class="mb-1">Fat Rascal</li>
+                                    <li class="mb-1">Financier</li>
+                                    <li class="mb-1">Genoise</li>
+                                    <li class="mb-1">Gingerbread</li>
+                                    <li class="mb-1">Goose Breast</li>
+                                    <li class="mb-1">Parkin</li>
+                                    <li class="mb-1">Petit Gâteau</li>
+                                    <li class="mb-1">Salzburger Mockerl</li>
+                                    <li class="mb-1">Soufflé</li>
+                                </ul>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">Streuselkuchen</li>
+                                    <li class="mb-1">Tea Loaf</li>
+                                    <li class="mb-1">Napoleonshat</li>
+                                    <li class="mb-1">Merveilleux</li>
+                                    <li class="mb-1">Magdalena</li>
+                                    <li class="mb-1">Cremeschnitte</li>
+                                    <li class="mb-1">Cheesecake</li>
+                                    <li class="mb-1">Bebinca</li>
+                                    <li class="mb-1">Fruitcake</li>
+                                    <li class="mb-1">Chocalate Cake</li>
+                                    <li class="mb-1">Fat Rascal</li>
+                                    <li class="mb-1">Financier</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="row payments_cards">
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card mt-3 position-relative">
+                        <i class="bi-shuffle text-muted position-absolute end-0 translate-middle-x top-0"></i>
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <h5 class="card-title payment_titles">Payment Status</h5>
+                            <div role="progressbar" class="progress-bar-circle position-relative w-25   " data-color="#00365a" data-trailcolor="#d7d7d7"
+                                aria-valuemax="100" aria-valuenow="40" data-show-percent="true"><svg viewBox="0 0 100 100"
+                                    style="display: block; width: 100%;">
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#d7d7d7" stroke-width="4"
+                                        fill-opacity="0"></path>
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#00365a" stroke-width="4"
+                                        fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 180.981;"></path>
+                                </svg>
+                                <div class="progressbar-text">40%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card mt-3 position-relative">
+                        <i class="bi-shuffle text-muted position-absolute end-0 top-0 translate-middle-x"></i>
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <h5 class="card-title payment_titles">Work Progress</h5>
+                            <div role="progressbar" class="progress-bar-circle position-relative w-25" data-color="#922c88" data-trailcolor="#d7d7d7"
+                                aria-valuemax="100" aria-valuenow="64" data-show-percent="true"><svg viewBox="0 0 100 100"
+                                    style="display: block; width: 100%;">
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#d7d7d7" stroke-width="4"
+                                        fill-opacity="0"></path>
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#00365a" stroke-width="4"
+                                        fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 108.589;"></path>
+                                </svg>
+                                <div class="progressbar-text">64%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card mt-3 position-relative">
+                        <i class="bi-shuffle text-muted position-absolute end-0 top-0 translate-middle-x"></i>
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <h5 class="card-title payment_titles">Tasks Completed</h5>
+                            <div role="progressbar" class="progress-bar-circle position-relative w-25" data-color="#922c88" data-trailcolor="#d7d7d7"
+                                aria-valuemax="100" aria-valuenow="75" data-show-percent="true"><svg viewBox="0 0 100 100"
+                                    style="display: block; width: 100%;">
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#d7d7d7" stroke-width="4"
+                                        fill-opacity="0"></path>
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#00365a" stroke-width="4"
+                                        fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 75.4088;"></path>
+                                </svg>
+                                <div class="progressbar-text">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card mt-3 position-relative">
+                        <i class="bi-shuffle text-muted position-absolute end-0 top-0 translate-middle-x"></i>
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <h5 class="card-title payment_titles">Payments Done</h5>
+                            <div role="progressbar" class="progress-bar-circle position-relative w-25" data-color="#922c88" data-trailcolor="#d7d7d7"
+                                aria-valuemax="100" aria-valuenow="32" data-show-percent="true"><svg viewBox="0 0 100 100"
+                                    style="display: block; width: 100%;">
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#d7d7d7" stroke-width="4"
+                                        fill-opacity="0"></path>
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#00365a" stroke-width="4"
+                                        fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 205.112;"></path>
+                                </svg>
+                                <div class="progressbar-text">32%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_4">
+            <div class="row graph_3">
+                <div class="col-12 col-md-6">
+                    <div class="card mt-3">
+                        <div class="graph3_card card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="card_graph3_heading">
+                                    <h5 class="card-title graph_card3_heading mb-0">Website Visitors</h5>
+                                    <p class="text-muted">Unique visitors</p>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle rounded-pill dropdown_button" data-bs-target="dropdown">This Week</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Last Week</a></li>
+                                        <li><a href="#" class="dropdown-item">This Month</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <img src="Images/Graphs/Graph_3.jpg" alt="" class="w-100"> -->
+                            <canvas id="graph3"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mt-3">
+                        <div class="graph3_card card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="card_graph3_heading">
+                                    <h5 class="card-title graph_card3_heading mb-0">Website Visitors</h5>
+                                    <p class="text-muted">Unique visitors</p>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle rounded-pill dropdown_button" data-bs-target="dropdown">This Week</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Last Week</a></li>
+                                        <li><a href="#" class="dropdown-item">This Month</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <canvas id="graph4"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_5">
+            <div class="row analysis_card">
+                <div class="col-12 col-md-6 col-lg-12 col-xl-4">
+                    <div class="row analyser_1">
+                        <div class="col-lg-4 col-xl-12">
+                            <div class="card mt-3">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div class="analysericons">
+                                        <i class="bi-file-earmark text-white"></i>
+                                        <p class="card-title text-light mb-0 analyser_1_heading">5 Files</p>
+                                        <p class="text-light analysericons_text mb-0">Pending for print</p>
+                                    </div>
+                                    <div role="progressbar" class="progress-bar-circle progress-bar-banner position-relative d-flex justify-content-center " data-color="white"
+                                        data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="12" data-show-percent="false"><svg
+                                            viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgba(255,255,255,0.2)" stroke-width="4"
+                                                fill-opacity="0"></path>
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white" stroke-width="4"
+                                                fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 175.954;"></path>
+                                        </svg>
+                                        <div class="progressbar-text">5/12</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <!-- <div class="row analyser_1"> -->
+                        <div class="col-lg-4 col-xl-12">
+                            <div class="card mt-3">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div class="analysericons">
+                                        <i class="fa fa-user-o text-white"></i>
+                                        <p class="card-title text-light mb-0 analyser_1_heading">4 Orders</p>
+                                        <p class="text-light analysericons_text mb-0">On approval process</p>
+                                    </div>
+                                    <div role="progressbar" class="progress-bar-circle progress-bar-banner position-relative d-flex justify-content-center" data-color="white"
+                                        data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="4" aria-valuemax="6" data-show-percent="false"><svg
+                                            viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgba(255,255,255,0.2)" stroke-width="4"
+                                                fill-opacity="0"></path>
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white" stroke-width="4"
+                                                fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 100.545;"></path>
+                                        </svg>
+                                        <div class="progressbar-text"
+                                            style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">
+                                            4/6</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="row analyser_1"> -->
+                        <div class="col-lg-4 col-xl-12">
+                            <div class="card mt-3">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div class="analysericons">
+                                        <i class="bi-bell text-white"></i>
+                                        <p class="card-title text-light mb-0 analyser_1_heading">8 Alerts</p>
+                                        <p class="text-light analysericons_text mb-0">Waiting for notice</p>
+                                    </div>
+                                    <div role="progressbar" class="progress-bar-circle progress-bar-banner position-relative d-flex justify-content-center " data-color="white"
+                                        data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="12" data-show-percent="false"><svg
+                                            viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgba(255,255,255,0.2)" stroke-width="4"
+                                                fill-opacity="0"></path>
+                                            <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white" stroke-width="4"
+                                                fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 175.954;"></path>
+                                        </svg>
+                                        <div class="progressbar-text">5/12</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card mt-3  analyser2">
+                        <!-- <div class="plane"> -->
+                        <div class="card-body">
+                            <h5 class="text-light mb-3">Advanced Search</h5>
+                            <div class="form-container d-flex flex-column mx-auto p-md-3">
+                                <div class="dropdown mb-3">
+                                    <div class="form-label">State</div>
+                                    <button class="btn btn-outline-primary dropdown-toggle w-100" data-bs-toggle="dropdown"></button>
+                                    <ul class="dropdown-menu w-100">
+                                        <h6 class="mb-2 ms-3">Alaskan/Hawaiin Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Alaska</li>
+                                                <li class="dropdown-item mb-2">Hawaai</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Pacific Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">California</li>
+                                                <li class="dropdown-item mb-2">Nevada</li>
+                                                <li class="dropdown-item mb-2">Oregon</li>
+                                                <li class="dropdown-item mb-2">Washington</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Mountain Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Arizona</li>
+                                                <li class="dropdown-item mb-2">Colarado</li>
+                                                <li class="dropdown-item mb-2">Idaho</li>
+                                                <li class="dropdown-item mb-2">Montana</li>
+                                                <li class="dropdown-item mb-2">Nebraska</li>
+                                                <li class="dropdown-item mb-2">New Mexico</li>
+                                                <li class="dropdown-item mb-2">North Dakota</li>
+                                                <li class="dropdown-item mb-2">Utah</li>
+                                                <li class="dropdown-item mb-2">Wyoming</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Central Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Albama</li>
+                                                <li class="dropdown-item mb-2">Arkansas</li>
+                                                <li class="dropdown-item mb-2">Illinois</li>
+                                                <li class="dropdown-item mb-2">Iowa</li>
+                                                <li class="dropdown-item mb-2">Kansas</li>
+                                                <li class="dropdown-item mb-2">Kentucky</li>
+                                                <li class="dropdown-item mb-2">Louisiana</li>
+                                                <li class="dropdown-item mb-2">Minnesota</li>
+                                                <li class="dropdown-item mb-2">Mississippi</li>
+                                                <li class="dropdown-item mb-2">Missouri</li>
+                                                <li class="dropdown-item mb-2">Okhlahoma</li>
+                                                <li class="dropdown-item mb-2">South Dakota</li>
+                                                <li class="dropdown-item mb-2">Texas</li>
+                                                <li class="dropdown-item mb-2">Tennessee</li>
+                                                <li class="dropdown-item mb-2">Wisconsin</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Eastern Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Connecticut</li>
+                                                <li class="dropdown-item mb-2">Delaware</li>
+                                                <li class="dropdown-item mb-2">Florida</li>
+                                                <li class="dropdown-item mb-2">Georgia</li>
+                                                <li class="dropdown-item mb-2">Indiana</li>
+                                                <li class="dropdown-item mb-2">Maine</li>
+                                                <li class="dropdown-item mb-2">Maryland</li>
+                                                <li class="dropdown-item mb-2">Massachusetts</li>
+                                                <li class="dropdown-item mb-2">Michigan</li>
+                                                <li class="dropdown-item mb-2">New Hamsphire</li>
+                                                <li class="dropdown-item mb-2">New Jersey</li>
+                                                <li class="dropdown-item mb-2">New York</li>
+                                                <li class="dropdown-item mb-2">North Carolina</li>
+                                                <li class="dropdown-item mb-2">Ohio</li>
+                                                <li class="dropdown-item mb-2">Pennsylvania</li>
+                                                <li class="dropdown-item mb-2">Rohde Island</li>
+                                                <li class="dropdown-item mb-2">South Carolina</li>
+                                                <li class="dropdown-item mb-2">Vermount</li>
+                                                <li class="dropdown-item mb-2">Virginia</li>
+                                                <li class="dropdown-item mb-2">West Virginia</li>
+                                                <li class="dropdown-item mb-2">The No Optgroup Zone</li>
+                                                <li class="dropdown-item mb-2">The Panic Zone</li>
+                                                <li class="dropdown-item mb-2">The Twilight Zone</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown mb-3">
+                                    <div class="form-label">City</div>
+                                    <button class="btn btn-outline-primary dropdown-toggle w-100" data-bs-toggle="dropdown"></button>
+                                    <ul class="dropdown-menu w-100">
+                                        <h6 class="mb-2 ms-3">Alaskan/Hawaiin Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Alaska</li>
+                                                <li class="dropdown-item mb-2">Hawaai</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Pacific Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">California</li>
+                                                <li class="dropdown-item mb-2">Nevada</li>
+                                                <li class="dropdown-item mb-2">Oregon</li>
+                                                <li class="dropdown-item mb-2">Washington</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Mountain Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Arizona</li>
+                                                <li class="dropdown-item mb-2">Colarado</li>
+                                                <li class="dropdown-item mb-2">Idaho</li>
+                                                <li class="dropdown-item mb-2">Montana</li>
+                                                <li class="dropdown-item mb-2">Nebraska</li>
+                                                <li class="dropdown-item mb-2">New Mexico</li>
+                                                <li class="dropdown-item mb-2">North Dakota</li>
+                                                <li class="dropdown-item mb-2">Utah</li>
+                                                <li class="dropdown-item mb-2">Wyoming</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Central Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Albama</li>
+                                                <li class="dropdown-item mb-2">Arkansas</li>
+                                                <li class="dropdown-item mb-2">Illinois</li>
+                                                <li class="dropdown-item mb-2">Iowa</li>
+                                                <li class="dropdown-item mb-2">Kansas</li>
+                                                <li class="dropdown-item mb-2">Kentucky</li>
+                                                <li class="dropdown-item mb-2">Louisiana</li>
+                                                <li class="dropdown-item mb-2">Minnesota</li>
+                                                <li class="dropdown-item mb-2">Mississippi</li>
+                                                <li class="dropdown-item mb-2">Missouri</li>
+                                                <li class="dropdown-item mb-2">Okhlahoma</li>
+                                                <li class="dropdown-item mb-2">South Dakota</li>
+                                                <li class="dropdown-item mb-2">Texas</li>
+                                                <li class="dropdown-item mb-2">Tennessee</li>
+                                                <li class="dropdown-item mb-2">Wisconsin</li>
+                                            </ul>
+                                        </li>
+                                        <h6 class="mb-2 ms-3">Eastern Time Zone</h6>
+                                        <li class="dropdown-item">
+                                            <ul class="unordered p-0">
+                                                <li class="dropdown-item mb-2">Connecticut</li>
+                                                <li class="dropdown-item mb-2">Delaware</li>
+                                                <li class="dropdown-item mb-2">Florida</li>
+                                                <li class="dropdown-item mb-2">Georgia</li>
+                                                <li class="dropdown-item mb-2">Indiana</li>
+                                                <li class="dropdown-item mb-2">Maine</li>
+                                                <li class="dropdown-item mb-2">Maryland</li>
+                                                <li class="dropdown-item mb-2">Massachusetts</li>
+                                                <li class="dropdown-item mb-2">Michigan</li>
+                                                <li class="dropdown-item mb-2">New Hamsphire</li>
+                                                <li class="dropdown-item mb-2">New Jersey</li>
+                                                <li class="dropdown-item mb-2">New York</li>
+                                                <li class="dropdown-item mb-2">North Carolina</li>
+                                                <li class="dropdown-item mb-2">Ohio</li>
+                                                <li class="dropdown-item mb-2">Pennsylvania</li>
+                                                <li class="dropdown-item mb-2">Rohde Island</li>
+                                                <li class="dropdown-item mb-2">South Carolina</li>
+                                                <li class="dropdown-item mb-2">Vermount</li>
+                                                <li class="dropdown-item mb-2">Virginia</li>
+                                                <li class="dropdown-item mb-2">West Virginia</li>
+                                                <li class="dropdown-item mb-2">The No Optgroup Zone</li>
+                                                <li class="dropdown-item mb-2">The Panic Zone</li>
+                                                <li class="dropdown-item mb-2">The Twilight Zone</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-label">Date</div>
+                                <div class="input-group mb-5">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-text"><i class="bi-calendar"></i></span>
+                                </div>
+                                <div class="form_range mb-5">
+                                    <label for="PriceRange" class="form-label">Price Range</label>
+                                    <input type="range" class="form-range" id="PriceRange">
+                                </div>
+                                <div class="form_search_button mx-auto">
+                                    <button class="btn btn-lg rounded-pill">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4 mt-3 analyser3_col">
+                    <div class="analyser3 row row-cols-2 justify-content-around">
+                        <div class="col card">
+                            <div class="card-body">
+                                <h5 class="card-title analysing_price">$1,250</h5>
+                                <p class="analysing_c1 mb-0">Total Orders-Mon</p>
+                                <!-- <img src="Images/Graphs/Graph_5.png" alt="" class="w-100"> -->
+                                <canvas id="graph5"></canvas>
+                            </div>
+                        </div>
+                        <div class="col card">
+                            <div class="card-body">
+                                <h5 class="title">$36</h5>
+                                <p class="analysing_c1 mb-0">Pending Orders-Sun</p>
+                                <!-- <img src="Images/Graphs/Graph_6.png" alt="" class="w-100"> -->
+                                <canvas id="graph6"></canvas>
+                            </div>
+                        </div>
+                        <div class="col card mt-3 mt-md-2">
+                            <div class="card-body">
+                                <h5 class="title">$350</h5>
+                                <p class="analysing_c1 mb-0">Active Orders-Mon</p>
+                                <!-- <img src="Images/Graphs/Graph_6.png" alt="" class="w-100"> -->
+                                <canvas id="graph7"></canvas>
+                            </div>
+                        </div>
+                        <div class="col card mt-3 mt-md-2">
+                            <div class="card-body">
+                                <h5 class="title">$200</h5>
+                                <p class="analysing_c1 mb-0">Shipped Orders-Mon</p>
+                                <!-- <img src="Images/Graphs/Graph_6.png" alt="" class="w-100"> -->
+                                <canvas id="graph8"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rated_items mt-3 card position-relative">
+                        <div class="card-body">
+                            <h5 class="card-title rated_heading">Top Rated Items</h5>
+                            <div class="rated_img mb-2">
+                                <img src="Images/Carousel/1.jpg" alt="" class="w-100">
+                            </div>
+                            <p class="rated_card_title mb-0 text-center">3. Cheesecake</p>
+                            <div class="rated_icons text-center">
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <span>(48)</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <a href="#OffcanvasContainer" class="position-sticky p-0 btn btn-outline-light top-50 translate-middle offcanvas_button" data-bs-toggle="offcanvas">
+        <i class="bi-star text-primary"></i>
+    </a>
+    <div class="offcanvas offcanvas-end offcanvas_main_container translate-middle-y top-50" id="OffcanvasContainer">
+        <div class="offcanvas-body p-0">
+            <div class="p-4">
+                <div class="offcanvas-title text-secondary mb-2">Light Theme</div>
+                <div class="offcanvas_icons d-flex mb-3 ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir1"></p>
+                    <p class="border rounded-circle cir cir2"></p>
+                    <p class="border rounded-circle cir cir3"></p>
+                    <p class="border rounded-circle cir cir4"></p>
+                    <p class="border rounded-circle cir cir5"></p>
+                </div>
+                <div class="offcanvas_icons d-flex ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir6"></p>
+                    <p class="border rounded-circle cir cir7"></p>
+                    <p class="border rounded-circle cir cir8"></p>
+                    <p class="border rounded-circle cir cir9"></p>
+                    <p class="border rounded-circle cir cir10"></p>
+                </div>
+                <div class="offcanvas-title text-secondary mb-2">Dark Theme</div>
+                <div class="offcanvas_icons d-flex mb-3 ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir1"></p>
+                    <p class="border rounded-circle cir cir2"></p>
+                    <p class="border rounded-circle cir cir3"></p>
+                    <p class="border rounded-circle cir cir4"></p>
+                    <p class="border rounded-circle cir cir5"></p>
+                </div>
+                <div class="offcanvas_icons d-flex ms-2 justify-content-between">
+                    <p class="border rounded-circle cir cir6"></p>
+                    <p class="border rounded-circle cir cir7"></p>
+                    <p class="border rounded-circle cir cir8"></p>
+                    <p class="border rounded-circle cir cir9"></p>
+                    <p class="border rounded-circle cir cir10"></p>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="offcanvas-title">Border Radius</div>
+                <div class="d-flex align-items-center mt-2">
+                    <div class="border rounded-circle strong_border "></div>
+                    <div class="ms-1 me-4 strong_border_text">Rounded</div>
+                    <div class="border rounded-circle border-secondary light_border"></div>
+                    <div class="ms-1 light_border_text">Flat</div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="offcanvas-title">Direction</div>
+                <div class="d-flex align-items-center mt-2">
+                    <div class="border rounded-circle strong_border"></div>
+                    <div class="ms-1 me-4 strong_border_text">Ltr</div>
+                    <div class="border rounded-circle border-secondary light_border"></div>
+                    <div class="ms-1 light_border_text">Rtl</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const graphOne=document.getElementById('graphOne');
+    var chartOne=new Chart(graphOne,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                backgroundColor:"#fff",
+                borderColor:"#00365a",
+                borderWidth:3,
+                pointRadius:6,
+                pointHoverRadius:6,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#f9f9f9",
+                pointHoverBackgroundColor:"#00365a",
+                data:[54,63,60,65,60,68,60],
+                lineTension:0.38,
+                
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false
+                    },
+                    // offset:true,
+                    ticks:{
+                        min:50,
+                        max:70,
+                        stepSize:5,
+                        backdropColor:"black",
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    });
+    const graph2=document.getElementById('graph2');
+    var cahrtTwo=new Chart(graph2,{
+        type:'polarArea',
+        data:{
+            datasets:[{
+                data:[80,90,50],
+                backgroundColor:["#cad5db80","#ced9e699","#e2e5e999"],
+                borderColor:["#2d5976","#1d5392","#31a4b8"],
+                borderAlign:"center"
+            }],
+            labels:["Cakes","Desserts","Cupcakes"]
+        },
+        options:{
+            plugins:{
+                legend:{
+                    position:"bottom",
+                    labels:{
+                        usePointStyle:true,
+                        padding:20
+                    }
+                }
+            },
+        }
+    });
+    const graph3=document.getElementById('graph3');
+    const chartThree=new Chart(graph3,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:4,
+                pointHoverRadius:4,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#f9f9f9",
+                pointHoverBackgroundColor:"#00365a",
+                data:[54,63,60,65,60,68,60],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+                fill:'1'
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false
+                    },
+                    // offset:true,
+                    ticks:{
+                        min:50,
+                        max:70,
+                        stepSize:5,
+                        backdropColor:"black",
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+    const graph4=document.getElementById('graph4');
+    const chartFour=new Chart(graph4,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:4,
+                pointHoverRadius:4,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#f9f9f9",
+                pointHoverBackgroundColor:"#00365a",
+                data:[65,60,68,54,63,60,60],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+                fill:'1'
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false
+                    },
+                    // offset:true,
+                    ticks:{
+                        min:50,
+                        max:70,
+                        stepSize:5,
+                        backdropColor:"black",
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+    const graph5=document.getElementById('graph5');
+    const chartFive=new Chart(graph5,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:3,
+                pointHoverRadius:3,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#00365a",
+                pointHoverBackgroundColor:"#00365a",
+                data:[1250,1300,1550,921,1810,1106,1610],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+                fill:'1'
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    // offset:true,
+                    ticks:{
+                        display:false,
+                        min:920,
+                        max:1810,
+                        stepSize:5,
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    ticks:{
+                        display:false
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+    const graph6=document.getElementById('graph6');
+    const chartSix=new Chart(graph6,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:3,
+                pointHoverRadius:3,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#00365a",
+                pointHoverBackgroundColor:"#00365a",
+                data:[115,120,300,222,105,85,36],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+                fill:'1'
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    // offset:true,
+                    ticks:{
+                        display:false,
+                        min:36,
+                        max:300,
+                        stepSize:5,
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    ticks:{
+                        display:false
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+    const graph7=document.getElementById('graph7');
+    const chartSeven=new Chart(graph7,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:3,
+                pointHoverRadius:3,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#00365a",
+                pointHoverBackgroundColor:"#00365a",
+                data:[350,452,762,952,630,85,158],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    // offset:true,
+                    ticks:{
+                        display:false,
+                        min:952,
+                        max:158,
+                        stepSize:5,
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    ticks:{
+                        display:false
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+    const graph8=document.getElementById('graph8');
+    const chartEight=new Chart(graph8,{
+        type:'line',
+        data:{
+            labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+            datasets:[{
+                borderColor:"#00365a",
+                borderWidth:2,
+                pointRadius:3,
+                pointHoverRadius:3,
+                pointHoverBorderColor:"#f9f9f9",
+                pointBorderColor:"#00365a",
+                pointBackgroundColor:"#00365a",
+                pointHoverBackgroundColor:"#00365a",
+                data:[200,452,250,630,125,85,20],
+                lineTension:0.38,
+                backgroundColor:"#fff",
+            }]
+        },
+        options:{
+            scales:{
+                
+                y:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    // offset:true,
+                    ticks:{
+                        display:false,
+                        min:20,
+                        max:630,
+                        stepSize:5,
+                    }
+                },
+                x:{
+                    grid:{
+                        drawBorder:false,
+                        lineWidth:0
+                    },
+                    ticks:{
+                        display:false
+                    }
+                },
+            },
+            plugins:{
+                legend:{
+                    display:false
+                }
+            },
+            
+        }
+    })
+</script>
+</html>
